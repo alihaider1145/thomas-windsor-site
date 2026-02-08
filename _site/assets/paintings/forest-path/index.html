@@ -5,15 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Forest Path - Thomas Windsor</title>
     <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/reset.css">
+    <link rel="stylesheet" href="/assets/css/variables.css">
 </head>
 <body>
     <header>
-        <nav>
-            <a href="/">Home</a>
-            <a href="/gallery/">Gallery</a>
-            <a href="/about/">About</a>
-            <a href="/contact/">Contact</a>
-        </nav>
+      <nav class="nav">
+        <div class="nav-container">
+          <a class="highlighted-text" href="/">Home</a>
+          <a class="highlighted-text" href="/gallery/">Gallery</a>
+          <a class="highlighted-text" href="/about/">About</a>
+          <a class="highlighted-text" href="/contact/">Contact Us</a>
+        </div>
+      </nav>
     </header>
     
     <main>
@@ -22,38 +26,91 @@
     <a href="/gallery/" class="back-link">← Back to Gallery</a>
     
     <div class="painting-container">
-        <div class="painting-image">
-            <img src="/assets/images/paintings/forest-path.jpg" alt="Forest Path">
+        <div class="painting-img">
+            <img src="/assets/images/paintings/forest-path.png" alt="Forest Path">
         </div>
         
         <div class="painting-info">
             <h1>Forest Path</h1>
             
             <div class="painting-details">
-                <p class="price">$380</p>
-                <p class="size">20x24 inches</p>
-                <p class="medium">Oil on canvas</p>
-                <span class="availability sold">Sold</span>
-            </div>
-            
-            <div class="description">
-                <p>A peaceful walk through autumn woods, where golden leaves dance in the gentle breeze.</p>
+                <p class="price"><span>Price:</span> <span>$380</span></p>
+                <p class="size"><span>Size:</span> <span class="highlighted-text">20x24 inches</span></p>
+                <p class="medium"><span>Medium:</span> <span>Oil on canvas</span></p>
+                <p class="availability sold"><span>Availability:</span> <span class="highlighted-text">Sold</span></p>
+                <p class="description">
+                    <span>Description:</span> <span>A peaceful walk through autumn woods, where golden leaves dance in the gentle breeze.</span>
+                </p>
             </div>
             
             <div class="painting-actions">
                 
-                <a href="/contact/" class="btn btn-secondary">Contact for Details</a>
+                <a href="/contact/"> <button class="btn-secondary">Contact for Details</button></a>
             </div>
         </div>
     </div>
 </div>
     </main>
+
+    <section class="social section">
+      <h2 class="social-heading heading">Follow Thomas Windsor</h2>
+      <div class="social-container container">
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          class="social-link"
+          href="https://www.instagram.com/thomaswindsorstudio/?hl=en"
+        >
+          <img
+            class="social-img"
+            src="/assets/images/instagram.png"
+            alt="Instagram"
+          />
+        </a>
+
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          class="social-link"
+          href="https://www.youtube.com/@Thomas_Windsor"
+        >
+          <img
+            class="social-img"
+            src="/assets/images/youtube.png"
+            alt="Youtube"
+          />
+        </a>
+
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          class="social-link"
+          href="https://www.facebook.com/thomaswindsorstudio/?locale=en_GB"
+        >
+          <img
+            class="social-img"
+            src="/assets/images/facebook.png"
+            alt="Facebook"
+          />
+        </a>
+
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          class="social-link"
+          href="https://www.tiktok.com/@thomas_windsor"
+        >
+          <img
+            class="social-img"
+            src="/assets/images/tiktok.png"
+            alt="Tiktok"
+          />
+        </a>
+      </div>
+    </section>
     
     <footer>
-        <div class="social-links">
-            <!-- Social icons -->
-        </div>
-        <p>© 2025 Thomas Windsor</p>
+      <p>© 2025 Thomas Windsor</p>
     </footer>
 </body>
 </html>

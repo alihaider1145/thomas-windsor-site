@@ -1,0 +1,26 @@
+---
+layout: base.njk
+title: Gallery
+---
+
+<div class="gallery-page">
+    <h1>From the Studio</h1>
+    <p class="gallery-intro">Explore the collection of therapeutic landscape paintings. Each piece is an original oil painting created with mindfulness and care.</p>
+    
+    <div class="paintings-grid">
+        {% for painting in collections.paintings %}
+        <div class="painting-card">
+            <a href="{{ painting.url }}">
+                <img src="{{ painting.data.image }}" alt="{{ painting.data.title }}">
+                <div class="painting-card-info">
+                    <h3>{{ painting.data.title }}</h3>
+                    <p class="painting-price">${{ painting.data.price }}</p>
+                    <span class="availability-badge {% if painting.data.availability == 'Available' %}available{% else %}sold{% endif %}">
+                        {{ painting.data.availability }}
+                    </span>
+                </div>
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+</div>

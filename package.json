@@ -25,5 +25,8 @@
     "eslint": "9.39.2",
     "globals": "17.3.0",
     "prettier": "3.8.1"
+  },
+  "dependencies": {
+    "netlify-cms-app": "2.15.72"
   }
 }
