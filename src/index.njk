@@ -50,14 +50,12 @@ isHomepage: true
         allowfullscreen
       ></iframe>
     </div>
-    <a
-      href="https://www.youtube.com/@Thomas_Windsor"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <button class="youtube-channel-btn btn-primary">
-        Free weekly episodes on YouTube!
-      </button>
+    <a 
+    class="youtube-channel-btn btn-primary"
+    href="https://www.youtube.com/@Thomas_Windsor"
+    target="_blank"
+    rel="noopener noreferrer">
+      Free weekly episodes on YouTube!
     </a>
   </div>
 </section>
@@ -65,8 +63,8 @@ isHomepage: true
 <section class="featured-art section">
   <h2 class="featured-art-heading heading">From the Studio</h2>
   <div class="painting-grid container">
-    {% for painting in collections.paintings | reverse | slice(0, 4) %}
-    <div class="painting-card-{{ loop.index }}">
+    {% for painting in collection.paintings.slice(0, 4) | reverse %}
+    <div class="painting-card">
       <img
         class="painting-img"
         src="/.netlify/images?url={{ painting.data.image }}&w=600&q=80"
@@ -77,15 +75,11 @@ isHomepage: true
         <h3 class="painting-title">{{ painting.data.title }}</h3>
         <p class="painting-price">${{ painting.data.price }}</p>
       </div>
-      <a href="{{ painting.url }}">
-        <button class="featured-art-btn btn-secondary">View Details</button>
-      </a>
+      <a href="{{ painting.url }}" class="featured-art-btn btn-secondary">View Details</a>
     </div>
     {% endfor %}
   </div>
-  <a href="../gallery/">
-    <button class="btn-primary">View More</button>
-  </a>
+  <a href="../gallery/" class="btn-primary">View More</a>
 </section>
 
 <section class="cards section">

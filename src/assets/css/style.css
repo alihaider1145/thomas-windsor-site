@@ -69,6 +69,7 @@ h6 {
 }
 
 .btn-primary {
+  display: inline-block;
   padding: 1rem 3rem;
   border-radius: 1rem;
   border: none;
@@ -140,7 +141,7 @@ header {
   width: 25vw;
   height: 25vw;
   border-radius: 50%;
-  border: 2vw solid #ffffff;
+  border: 2vw solid var(--color-white);
 }
 
 .hero-title {
@@ -148,7 +149,7 @@ header {
   justify-content: center;
   align-items: end;
 
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  text-shadow: 2px 2px 4px var(--subtle-shadow);
   filter: contrast(1.1) saturate(1.2);
 
   background: linear-gradient(var(--color-blue), #2a4a5a);
@@ -212,7 +213,7 @@ header {
   column-gap: 10vw;
 }
 
-.painting-card-1 > .painting-card-info {
+.painting-card:nth-child(4n+1) > .painting-card-info {
   background: linear-gradient(
     to top,
     #3a3d2c 0%,
@@ -222,7 +223,7 @@ header {
   opacity: 0.8;
 }
 
-.painting-card-2 > .painting-card-info {
+.painting-card:nth-child(4n+2) > .painting-card-info {
   background: linear-gradient(
     to top,
     #2d3e45 0%,
@@ -232,7 +233,7 @@ header {
   opacity: 0.8;
 }
 
-.painting-card-3 > .painting-card-info {
+.painting-card:nth-child(4n+3) > .painting-card-info {
   background: linear-gradient(
     to top,
     #51203b 0%,
@@ -242,7 +243,7 @@ header {
   opacity: 0.8;
 }
 
-.painting-card-4 > .painting-card-info {
+.painting-card:nth-child(4n+4) > .painting-card-info {
   background: linear-gradient(
     to top,
     #3d2d42 0%,
@@ -264,7 +265,7 @@ header {
 .painting-title,
 .painting-price,
 .availability-badge {
-  color: #ffffff;
+  color: var(--color-white);
 }
 
 .painting-title {
@@ -299,7 +300,7 @@ div.painting-grid > * {
   max-height: 35rem;
   padding: 3rem;
   font-weight: normal;
-  color: #ffffff;
+  color: var(--color-white);
   border-radius: 1rem;
 
   display: flex;
@@ -323,7 +324,7 @@ div.painting-grid > * {
 /* f. a. q. */
 .faq-question {
   padding: 2rem;
-  border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+  border-bottom: 2px solid var(--subtle-shadow);
 }
 
 .faq-question:last-of-type {
@@ -406,7 +407,7 @@ footer {
 .about-container h2 {
   margin-top: 2rem;
   padding-top: 2rem;
-  border-top: 2px solid rgba(0, 0, 0, 0.2);
+  border-top: 2px solid var(--subtle-shadow);
   text-align: left;
 }
 
@@ -468,7 +469,7 @@ textarea {
   font-size: 1.8rem;
   padding: 1rem;
   border-radius: 1rem;
-  border: 1px solid rgba(0, 0, 0, 0.2);
+  border: 1px solid var(--subtle-shadow);
   flex: 1;
 }
 
@@ -487,7 +488,7 @@ form button {
     grid-template-columns: minmax(30rem, 30vw);
   }
 
-  .card-container{
+  .card-container {
     flex-direction: column;
     align-items: center;
   }
@@ -498,7 +499,7 @@ form button {
 
   .about-invitation,
   .about-text,
-  .video-container{
+  .video-container {
     width: 80vw;
   }
 
@@ -512,7 +513,7 @@ form button {
     justify-content: flex-start;
   }
 
-  form{
+  form {
     padding: 0;
   }
 }

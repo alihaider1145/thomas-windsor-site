@@ -9,7 +9,7 @@ title: Gallery
     
     <div class="painting-grid container">
         {% for painting in collections.paintings %}
-        <div class="painting-card-{{ loop.index }}">
+        <div class="painting-card">
             <img
             class="painting-img"
             src="/.netlify/images?url={{ painting.data.image }}&w=400&q=80"
