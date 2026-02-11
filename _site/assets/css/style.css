@@ -96,7 +96,8 @@ h6 {
 
 a:hover,
 .btn-secondary:hover,
-.btn-primary:hover {
+.btn-primary:hover
+.social-link:hover {
   transform: scale(1.1);
 }
 
@@ -253,8 +254,8 @@ header {
   opacity: 0.8;
 }
 
-/* #32504f */
-/* #3a3d2c */
+/* #32504f 5th color if required in the future*/
+/* #3a3d2c 6th color if required in the future*/
 
 .painting-card-info {
   transform: translateY(-3.5rem);
@@ -266,6 +267,10 @@ header {
 .painting-price,
 .availability-badge {
   color: var(--color-white);
+}
+
+.availability-badge {
+  font-size: 2rem;
 }
 
 .painting-title {
@@ -334,6 +339,10 @@ div.painting-grid > * {
 .social-img {
   width: 5rem;
   height: 5rem;
+}
+
+.social-link{
+  transition: transform 0.3s ease;
 }
 
 /* footer */
