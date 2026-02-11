@@ -63,7 +63,7 @@ isHomepage: true
 <section class="featured-art section">
   <h2 class="featured-art-heading heading">From the Studio</h2>
   <div class="painting-grid container">
-    {% for painting in collection.paintings.slice(0, 4) | reverse %}
+    {% for painting in collection.paintings | slice(0, 4) | reverse %}
     <div class="painting-card">
       <img
         class="painting-img"
