@@ -3,12 +3,12 @@ backend:
   branch: main
 
 media_folder: 'src/assets/images/paintings'
-public_folder: '/assets/images/paintings'
+public_folder: 'assets/images/paintings'
 
 collections:
   - name: 'paintings'
     label: 'Paintings'
-    folder: './src/assets/paintings/'
+    folder: 'src/assets/paintings'
     create: true
     slug: '{{slug}}'
     fields:
