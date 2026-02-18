@@ -26,9 +26,28 @@ layout: base.njk
             
             <div class="painting-actions">
                 {% if availability == "Available" %}
-                    <a href="#"><button class="btn-primary">Buy Now</button></a>
+                    {% if stripeLink %}
+                        {# Stripe Payment Link — buyer goes to Stripe checkout, gets auto-email #}
+                        <a class="btn-primary" href="{{ stripeLink }}" target="_blank" rel="noopener noreferrer">
+                            Buy Now
+                        </a>
+                    {% else %}
+                        {# No Stripe link yet — artist hasn't set it up for this painting #}
+                        <a class="btn-primary" href="/contact/">
+                            Contact to Purchase
+                        </a>
+                    {% endif %}
+                {% else %}
+                    {# Painting is sold #}
+                    <a class="btn-primary sold" disabled>
+                        Sold
+                    </a>
                 {% endif %}
-                <a href="/contact/"> <button class="btn-secondary">Contact for Details</button></a>
+                
+                {# Secondary action — always visible, for questions/commissions #}
+                <a class="btn-secondary" href="/contact/">
+                    Ask a Question
+                </a>
             </div>
         </div>
     </div>
