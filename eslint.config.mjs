@@ -9,9 +9,16 @@ export default [
     files: ['src/**/*.js'],
     languageOptions: {
       globals: {
+        module: 'readonly',
+        require: 'readonly',
+        __dirname: 'readonly',
+        
         window: 'readonly',
         document: 'readonly',
         console: 'readonly',
+        URLSearchParams: 'readonly',
+        
+        emailjs: 'readonly',
       },
     },
     rules: {

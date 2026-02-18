@@ -1,11 +1,10 @@
 module.exports = function (eleventyConfig) {
-  // Copy assets folder to output
-  eleventyConfig.addPassthroughCopy('src/assets');
-
-  // Copy admin folder for CMS
+  eleventyConfig.addPassthroughCopy('src/assets/fonts');
+  eleventyConfig.addPassthroughCopy('src/assets/images');
+  eleventyConfig.addPassthroughCopy('src/assets/js');
+  eleventyConfig.addPassthroughCopy('src/assets/css/style.css');
+  eleventyConfig.addPassthroughCopy('src/assets/css/reset.css');
   eleventyConfig.addPassthroughCopy('src/admin');
-
-  // Create paintings collection - CORRECT PATH
   eleventyConfig.addCollection('paintings', function (collectionApi) {
     const paintings = collectionApi.getFilteredByGlob(
       './src/assets/paintings/*.md'
@@ -23,5 +22,6 @@ module.exports = function (eleventyConfig) {
     },
     markdownTemplateEngine: 'njk',
     htmlTemplateEngine: 'njk',
+    templateFormats: ['html', 'njk', 'md', 'css'],
   };
 };

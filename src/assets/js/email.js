@@ -1,12 +1,12 @@
 // Sends artist notification email when a painting is sold
 
-(function() {
+(function () {
   'use strict';
 
   const EMAILJS_CONFIG = {
-    publicKey: 'fTsIU3-i9iJAsJ5u_',       
-    serviceId: 'service_xdhv8tn',       
-    templateId: 'template_1xyycpg',     
+    publicKey: 'fTsIU3-i9iJAsJ5u_',
+    serviceId: 'service_xdhv8tn',
+    templateId: 'template_1xyycpg',
   };
 
   emailjs.init(EMAILJS_CONFIG.publicKey);
@@ -27,30 +27,30 @@
     day: 'numeric',
     hour: '2-digit',
     minute: '2-digit',
-    timeZoneName: 'short'
+    timeZoneName: 'short',
   });
 
   const emailParams = {
-    email: window.ARTIST_EMAIL,               
-    painting_title: 'Unknown Painting',       
-    price: 'See Stripe',                  
-    buyer_email: 'See Stripe Dashboard',  
-    sale_time: saleTime,                     
-    session_id: sessionId,                
+    email: window.ARTIST_EMAIL,
+    painting_title: 'Unknown Painting',
+    price: 'See Stripe',
+    buyer_email: 'See Stripe Dashboard',
+    sale_time: saleTime,
+    session_id: sessionId,
   };
 
   console.log('Sending artist notification email...', emailParams);
 
-  emailjs.send(
-    EMAILJS_CONFIG.serviceId,
-    EMAILJS_CONFIG.templateId,
-    emailParams
-  )
-  .then(function(response) {
-    console.log('✅ Artist notification sent successfully', response.status, response.text);
-  })
-  .catch(function(error) {
-    console.error('❌ Failed to send artist notification:', error);
-  });
-
+  emailjs
+    .send(EMAILJS_CONFIG.serviceId, EMAILJS_CONFIG.templateId, emailParams)
+    .then(function (response) {
+      console.log(
+        '✅ Artist notification sent successfully',
+        response.status,
+        response.text
+      );
+    })
+    .catch(function (error) {
+      console.error('❌ Failed to send artist notification:', error);
+    });
 })();

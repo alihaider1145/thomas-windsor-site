@@ -1,3 +1,7 @@
+---
+permalink: /assets/css/variables.css
+eleventyExcludeFromCollections: true
+---
 @font-face {
   font-family: 'FS Albert ExtraBold';
   src: url('../../assets/fonts/FSAlbert ExtraBold/FSAlbert ExtraBold.otf')
@@ -18,14 +22,14 @@
 
 :root {
   /* Colors - auto-generated from site.js */
-  --color-one: #365a79;
-  --color-two: #95c59f;
-  --color-three: #0c1d27;
-  --color-white: #fefffb;
-  --subtle-shadow: rgba(0, 0, 0, 0.2);
+  --color-one: {{ site.colors.primary }};
+  --color-two: {{ site.colors.accent }};
+  --color-three: {{ site.colors.dark }};
+  --color-white: {{ site.colors.light }};
+  --subtle-shadow: {{ site.colors.subtleShadow }};
   
   /* Fonts - auto-generated from site.js */
-  --font-one: &#39;FS Albert ExtraBold&#39;;
-  --font-two: &#39;Mundo Sans Regular&#39;;
-  --font-three: &#39;Times New Roman&#39;;
+  --font-one: {{ site.fonts.emphasis }};
+  --font-two: {{ site.fonts.body }};
+  --font-three: {{ site.fonts.heading }};
 }
